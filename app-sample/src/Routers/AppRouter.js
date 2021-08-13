@@ -8,6 +8,7 @@ import { RegisterScreen } from '../components/auth/RegisterScreen';
 import { ResetPassword } from '../components/auth/ResetPassword';
 import { VerificationScreen } from '../components/auth/VerificationScreen';
 import { SampleScreen } from '../components/sample/SampleScreen';
+import { Loading } from '../components/ui/Loading';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
@@ -22,7 +23,7 @@ export const AppRouter = () => {
     }, [dispatch])
 
     if (checking) {
-        return (<h5>Please Wait...</h5>);
+        return (<Loading />);
     }
 
     return (

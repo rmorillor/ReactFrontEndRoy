@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { startForgotPassword } from '../../actions/auth';
 import { useForm } from '../../customHooks/useForm';
+import { Link } from 'react-router-dom';
 
 export const ForgotPassword = ({ history }) => {
 
@@ -36,12 +37,23 @@ export const ForgotPassword = ({ history }) => {
                                 onChange={handleForgotInputChange}
                             />
                         </div>
-                        <div className="form-group mt-3">
-                            <input
-                                type="submit"
-                                className="btnSubmit"
-                                value="Forgot Passsword"
-                            />
+                        <div className="row">
+                            <div className="col-10">
+                                <div className="form-group mt-3">
+                                    <input
+                                        type="submit"
+                                        className="btnSubmit"
+                                        value="Forgot Passsword"
+                                    />
+                                </div>
+                            </div>
+                            <div className="col-2 d-flex flex-row-reverse">
+                                <div className="col-sm-3 text_align_right mt-3 mr-4">
+                                    <Link className="link" to="/auth/login">
+                                        <span className="text_blue">Login</span>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>

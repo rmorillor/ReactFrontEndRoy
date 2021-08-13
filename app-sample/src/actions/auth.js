@@ -77,7 +77,7 @@ export const startRefreshToken = () => {
 
         const resp = await fetchSinToken('refresh-token', { rtoken }, 'POST');
         const body = await resp.json();
-        console.log(body);
+
         if (body.isVerified) {
 
             localStorage.setItem('token', body.jwtToken);

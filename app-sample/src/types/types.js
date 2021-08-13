@@ -19,4 +19,9 @@ export const types = {
     authStartTokenRenew: '[auth] Start token renew',
     authLogout: '[auth] Logout',
 
+    customerGet: '[customer] get all customers',
+    customerCreate: '[customer] create customers',
+    customerUpdate: '[customer] update customers',
+    customerDelete: '[customer] delete customers',
+
 }

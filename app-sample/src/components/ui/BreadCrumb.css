@@ -1,0 +1,13 @@
+ol {
+  height: 40px;
+  background-color: lightgray;
+  padding-top: 6px !important;
+}
+
+li {
+  margin-left: 8px;
+}
+
+.letterColor {
+  color: blue;
+}
