@@ -16,7 +16,11 @@ export const AppRouter = () => {
 
     const dispatch = useDispatch();
 
-    const { checking, id } = useSelector(state => state.auth);
+    const { checking, id, refreshToken } = useSelector(state => state.auth);
+
+    if (refreshToken) {
+        localStorage.setItem('TgoxKVCyogE5wkxw624B', refreshToken);
+    }
 
     useEffect(() => {
         dispatch(startRefreshToken());

@@ -67,7 +67,7 @@ export const RegisterScreen = () => {
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Lasst Name"
+                                placeholder="Last Name"
                                 name="lastName"
                                 value={lastName}
                                 onChange={handleRegisterInputChange}

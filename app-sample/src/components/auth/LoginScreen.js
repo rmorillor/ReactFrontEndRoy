@@ -64,7 +64,7 @@ export const LoginScreen = () => {
                         </Link>
                         <br />
                         <Link className="link" to="/auth/forgot-password">
-                            Forgot Password
+                            Forgot Password?
                         </Link>
 
                     </form>

@@ -1,7 +1,6 @@
 import Swal from "sweetalert2";
-import { fetchSinToken } from "../helpers/fetch"
+import { fetchConToken, fetchSinToken } from "../helpers/fetch"
 import { types } from "../types/types";
-import Cookies from 'universal-cookie';
 // import { eventLogout } from "./events";
 
 export const startLogin = (email, password) => {
@@ -10,16 +9,11 @@ export const startLogin = (email, password) => {
         const resp = await fetchSinToken('authenticate', { email, password }, 'POST');
         const body = await resp.json();
 
-        const cookies = new Cookies();
-        cookies.set('rtoken', body.refreshToken, { path: '/' });
-        console.log(cookies.get('rtoken'));
-
         if (body.isVerified) {
 
-            localStorage.setItem('token', body.jwtToken);
-            localStorage.setItem('token-init-date', new Date().getTime());
-
-            localStorage.setItem('rtoken', body.refreshToken);
+            localStorage.setItem('x2XP7gFna8E9hNWzhTgq', body.jwtToken);
+            //localStorage.setItem('o8rXsdx96LDLyq5jMZmQ', new Date().getTime());
+            localStorage.setItem('TgoxKVCyogE5wkxw624B', body.refreshToken);
 
             dispatch(login({
                 created: body.created,
@@ -73,16 +67,15 @@ export const startRegister = (title, firstName, lastName, email, password, confi
 export const startRefreshToken = () => {
     return async (dispatch) => {
 
-        const rtoken = localStorage.getItem('rtoken');
+        const rToken = localStorage.getItem('TgoxKVCyogE5wkxw624B');
 
-        const resp = await fetchSinToken('refresh-token', { rtoken }, 'POST');
+        const resp = await fetchConToken('refresh-token', { rToken }, 'POST');
         const body = await resp.json();
 
         if (body.isVerified) {
 
-            localStorage.setItem('token', body.jwtToken);
-            localStorage.setItem('token-init-date', new Date().getTime());
-            localStorage.setItem('rtoken', body.refreshToken);
+            localStorage.setItem('x2XP7gFna8E9hNWzhTgq', body.jwtToken);
+            // localStorage.setItem('o8rXsdx96LDLyq5jMZmQ', new Date().getTime());
 
             dispatch(login({
                 created: body.created,

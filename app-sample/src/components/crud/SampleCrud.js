@@ -130,15 +130,15 @@ export const SampleCrud = () => {
                     <div className="form-group">
                         <Label>First Name:</Label>
                         <br />
-                        <input type="text" className="form-control" placeholder="First Name" autoComplete="off" value={firstName} name="firstName" onChange={handleInputChange} />
+                        <input type="text" className="form-control" placeholder="First Name" autoComplete="off" value={firstName} name="firstName" onChange={handleInputChange} required />
                         <br />
                         <Label>Last Name:</Label>
                         <br />
-                        <input type="text" className="form-control" placeholder="Last Name" autoComplete="off" value={lastName} name="lastName" onChange={handleInputChange} />
+                        <input type="text" className="form-control" placeholder="Last Name" autoComplete="off" value={lastName} name="lastName" onChange={handleInputChange} required />
                         <br />
                         <Label>Document:</Label>
                         <br />
-                        <input type="text" className="form-control" placeholder="Document" autoComplete="off" value={documentId} name="documentId" onChange={handleInputChange} />
+                        <input type="text" className="form-control" placeholder="Document" autoComplete="off" value={documentId} name="documentId" onChange={handleInputChange} required />
                         <br />
                     </div>
                 </ModalBody>
@@ -158,15 +158,15 @@ export const SampleCrud = () => {
                         <br />
                         <Label>First Name:</Label>
                         <br />
-                        <input type="text" className="form-control" placeholder="First Name" autoComplete="off" value={firstName} name="firstName" onChange={handleInputChange} />
+                        <input type="text" className="form-control" placeholder="First Name" autoComplete="off" value={firstName} name="firstName" onChange={handleInputChange} required />
                         <br />
                         <Label>Last Name:</Label>
                         <br />
-                        <input type="text" className="form-control" placeholder="Last Name" autoComplete="off" value={lastName} name="lastName" onChange={handleInputChange} />
+                        <input type="text" className="form-control" placeholder="Last Name" autoComplete="off" value={lastName} name="lastName" onChange={handleInputChange} required />
                         <br />
                         <Label>Document:</Label>
                         <br />
-                        <input type="text" className="form-control" placeholder="Document" autoComplete="off" value={documentId} name="documentId" onChange={handleInputChange} />
+                        <input type="text" className="form-control" placeholder="Document" autoComplete="off" value={documentId} name="documentId" onChange={handleInputChange} required />
                         <br />
                     </div>
                 </ModalBody>
