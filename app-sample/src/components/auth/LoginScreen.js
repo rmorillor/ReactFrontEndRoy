@@ -30,6 +30,7 @@ export const LoginScreen = () => {
                 <div className="col-md-6 login-form-1">
                     <h3>Log In</h3>
                     <form onSubmit={handleLogin}>
+
                         <div className="form-group">
                             <input
                                 type="text"
@@ -40,6 +41,7 @@ export const LoginScreen = () => {
                                 onChange={handleLoginInputChange}
                             />
                         </div>
+
                         <div className="form-group">
                             <input
                                 type="password"
@@ -51,6 +53,7 @@ export const LoginScreen = () => {
                                 onChange={handleLoginInputChange}
                             />
                         </div>
+
                         <div className="form-group">
                             <input
                                 type="submit"

@@ -12,7 +12,6 @@ export const startLogin = (email, password) => {
         if (body.isVerified) {
 
             localStorage.setItem('x2XP7gFna8E9hNWzhTgq', body.jwtToken);
-            //localStorage.setItem('o8rXsdx96LDLyq5jMZmQ', new Date().getTime());
             localStorage.setItem('TgoxKVCyogE5wkxw624B', body.refreshToken);
 
             dispatch(login({
